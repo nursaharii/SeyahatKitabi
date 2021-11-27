@@ -14,6 +14,7 @@
 		84B174AF275153FF00C416C5 /* SeyahatKitabi.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84B174AD275153FF00C416C5 /* SeyahatKitabi.xcdatamodeld */; };
 		84B174B12751540100C416C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84B174B02751540100C416C5 /* Assets.xcassets */; };
 		84B174B42751540100C416C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B174B22751540100C416C5 /* LaunchScreen.storyboard */; };
+		84B174BC27515F5700C416C5 /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B174BB27515F5700C416C5 /* DetailsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		84B174B02751540100C416C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84B174B32751540100C416C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84B174B52751540100C416C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84B174BB27515F5700C416C5 /* DetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				84B174A4275153FF00C416C5 /* AppDelegate.swift */,
 				84B174A6275153FF00C416C5 /* SceneDelegate.swift */,
 				84B174A8275153FF00C416C5 /* ViewController.swift */,
+				84B174BB27515F5700C416C5 /* DetailsVC.swift */,
 				84B174AA275153FF00C416C5 /* Main.storyboard */,
 				84B174B02751540100C416C5 /* Assets.xcassets */,
 				84B174B22751540100C416C5 /* LaunchScreen.storyboard */,
@@ -145,6 +148,7 @@
 				84B174AF275153FF00C416C5 /* SeyahatKitabi.xcdatamodeld in Sources */,
 				84B174A5275153FF00C416C5 /* AppDelegate.swift in Sources */,
 				84B174A7275153FF00C416C5 /* SceneDelegate.swift in Sources */,
+				84B174BC27515F5700C416C5 /* DetailsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
