@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Seyahat Kitabım-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SeyahatKitabi" customModuleProvider="target" sceneMemberID="viewController">
@@ -30,7 +30,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="a4P-r1-bCG" secondAttribute="bottom" id="faj-ur-ipr"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="UZe-8M-pyM"/>
+                    <navigationItem key="navigationItem" title="Seyahat Kitabım" id="UZe-8M-pyM" colorLabel="IBBuiltInLabel-Red"/>
                     <connections>
                         <outlet property="tableView" destination="a4P-r1-bCG" id="LkD-Xe-dQE"/>
                         <segue destination="s7B-er-38P" kind="show" identifier="toDetailsVC" id="eb7-Q7-OwC"/>
@@ -48,17 +48,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="tCY-0v-wfu">
-                                <rect key="frame" x="20" y="372" width="374" height="389"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="tCY-0v-wfu">
+                                <rect key="frame" x="0.0" y="277" width="414" height="585"/>
                             </mapView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="flo-95-WxC">
+                                <rect key="frame" x="20" y="103" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Comment" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aUh-yA-hmo">
+                                <rect key="frame" x="20" y="165" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HIQ-Td-1Vh">
+                                <rect key="frame" x="153" y="227" width="109" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Save"/>
+                                <connections>
+                                    <action selector="save:" destination="s7B-er-38P" eventType="touchUpInside" id="S0F-V8-GGB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="b7d-3v-aIP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="flo-95-WxC" firstAttribute="leading" secondItem="aUh-yA-hmo" secondAttribute="leading" id="1Cv-ft-hPB"/>
+                            <constraint firstItem="flo-95-WxC" firstAttribute="trailing" secondItem="aUh-yA-hmo" secondAttribute="trailing" id="Ird-Nc-P7M"/>
+                            <constraint firstItem="tCY-0v-wfu" firstAttribute="top" secondItem="aUh-yA-hmo" secondAttribute="bottom" constant="78" id="XE2-pd-Qbu"/>
+                            <constraint firstItem="aUh-yA-hmo" firstAttribute="top" secondItem="flo-95-WxC" secondAttribute="bottom" constant="28" id="YVB-5A-k25"/>
+                            <constraint firstItem="flo-95-WxC" firstAttribute="top" secondItem="b7d-3v-aIP" secondAttribute="top" constant="15" id="bDb-fv-Svg"/>
+                            <constraint firstItem="tCY-0v-wfu" firstAttribute="bottom" secondItem="b7d-3v-aIP" secondAttribute="bottom" id="boO-tu-7vW"/>
+                            <constraint firstItem="tCY-0v-wfu" firstAttribute="leading" secondItem="b7d-3v-aIP" secondAttribute="leading" id="e3Q-Ko-kdk"/>
+                            <constraint firstItem="aUh-yA-hmo" firstAttribute="centerX" secondItem="tCY-0v-wfu" secondAttribute="centerX" id="grh-Ly-pZm"/>
+                            <constraint firstItem="flo-95-WxC" firstAttribute="trailing" secondItem="c78-i4-oIY" secondAttribute="trailingMargin" id="jev-Ij-gNf"/>
+                            <constraint firstItem="flo-95-WxC" firstAttribute="leading" secondItem="c78-i4-oIY" secondAttribute="leadingMargin" id="ufp-VG-qU9"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="aOG-7K-813"/>
                     <connections>
+                        <outlet property="comment" destination="aUh-yA-hmo" id="F2b-YE-r0F"/>
                         <outlet property="mapView" destination="tCY-0v-wfu" id="tLU-JJ-Voh"/>
+                        <outlet property="name" destination="flo-95-WxC" id="Try-9D-cyr"/>
+                        <outlet property="saveBtn" destination="HIQ-Td-1Vh" id="2DP-CC-shL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PbT-da-uQ0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
